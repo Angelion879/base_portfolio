@@ -1,2 +1,2 @@
 # base_portfolio
-Base of my personal portfolio website
+Source code for my personal portfolio website
