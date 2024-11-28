@@ -16,6 +16,7 @@ a:hover{
 .text{
     color: #f8fcff;
     font-size: 2rem;
+    font-family: "Orbitron", sans-serif;
 }
 
 .highlights {
@@ -38,7 +39,7 @@ a:hover{
 }
 
 .nav_button{
-    width: 12rem;
+    width: 16rem;
     display: flex;
     align-items: center;
     justify-content: center;
