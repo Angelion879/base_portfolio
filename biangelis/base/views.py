@@ -11,5 +11,5 @@ def feed(request):
 def post(request):
     return render(request, 'basis/post.html')
 
-def profile(request):
-    return render(request, 'basis/profile.html')
+def contact(request):
+    return render(request, 'basis/contact.html')
