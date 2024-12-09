@@ -7,11 +7,6 @@ body{
     margin: 0;
 }
 
-h1{
-    font-family: "Orbitron", sans-serif;
-    font-size: 10rem;
-}
-
 a{
     text-decoration: none;
 }
@@ -20,6 +15,11 @@ a:hover{
     .nav_button{
         background-color: #232738;
     }
+}
+
+.title{
+    font-family: "Orbitron", sans-serif;
+    font-size: 10rem;
 }
 
 .text{
