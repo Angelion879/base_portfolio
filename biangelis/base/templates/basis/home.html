@@ -1,4 +1,5 @@
 {% extends 'basis/main.html' %}
+{% load static %}
 
 {% block content %}
 <style>
@@ -13,10 +14,10 @@
 
 <div class="intro light content_block">
     <div class="content_holder">
-        <p class="title">Hello, and welcome! I'm Bianca Angelis!</p>
+        <p class="intro_title">Hello! I'm <span class="highlights">Bianca Angelis</span>!</p>
     </div>
     <div class="content_holder">
-        <p>PLACEHOLDER</p>
+        <img class="profile_pic" src="{% static 'image/profpic.jpg' %}">
     </div>
 </div>
 <div class="dark content_block">
