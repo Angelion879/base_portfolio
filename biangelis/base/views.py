@@ -7,7 +7,7 @@ def home(request):
     return render(request, 'basis/home.html')
 
 def feed(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(active=True)
 
     context = {'posts':posts}
     return render(request, 'basis/feed.html', context)
