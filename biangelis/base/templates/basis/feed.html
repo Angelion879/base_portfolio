@@ -11,11 +11,12 @@
         }
     }
 </style>
-<h1 class="title">FEED PAGE</h1>
+<div class="intro">
+    <h1 class="title">Here are some of my projects:</h1>
+</div>
 
-{% for post in posts %}
-
-<div>
+<div class="preview_holder">
+    {% for post in posts %}
     <div class="preview">
         <img class="thumbnail" src="{{post.thumbnail.url}}">
         <div class="post_preview">
@@ -23,11 +24,11 @@
             <p class="preview_subtitle">{{post.sub_title}}</p>
         </div>
     </div>
-</div>
-
-{% empty %}
+    
+    {% empty %}
     <h3>No posts found</h3>
-
-{% endfor %}
+    
+    {% endfor %}
+</div>
 
 {% endblock content %}
