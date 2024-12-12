@@ -29,9 +29,14 @@ a:hover{
     color: #ffce8a;
 }
 
+.intro_title{
+    font-family: "Orbitron", sans-serif;
+    font-size: 8rem;
+}
+
 .title{
     font-family: "Orbitron", sans-serif;
-    font-size: 7rem;
+    font-size: 5rem;
 }
 
 .text{
@@ -43,7 +48,13 @@ a:hover{
 
 .preview_title{
     font-family: "Orbitron", sans-serif;
-    font-size: 5rem;
+    font-size: 3rem;
+}
+
+.preview_subtitle{
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 1.3rem;
 }
 
 .navbar{
@@ -71,7 +82,7 @@ a:hover{
     justify-content: center;
 }
 
-.intro.content_block{
+.intro{
     top: 8rem;
     position: relative;
 }
@@ -93,15 +104,32 @@ a:hover{
     justify-content: space-evenly;
 }
 
-.preview{
-    width: 50%;
-    height: 30rem;
+.preview_holder{
+    top: 9rem;
+    width: 100%;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.preview{
+    width: 45%;
+    height: 20rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .thumbnail{
-    width: 20rem;
+    width: 25rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.profile_pic{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
