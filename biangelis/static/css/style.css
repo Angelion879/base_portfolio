@@ -37,6 +37,7 @@ a:hover{
 .title{
     font-family: "Orbitron", sans-serif;
     font-size: 5rem;
+    font-weight: 400;
 }
 
 .text{
@@ -124,5 +125,13 @@ a:hover{
 .thumbnail{
     width: 25rem;
     height: 15rem;
+    object-fit: cover;
+}
+
+.profile_pic{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    rotate: 28deg;
     object-fit: cover;
 }
