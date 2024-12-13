@@ -22,7 +22,7 @@ a:hover{
 }
 
 .dark{
-    background-color: #4f5869;
+    background-color: #1e2233;
 }
 
 .highlights {
@@ -134,4 +134,22 @@ a:hover{
     border-radius: 50%;
     rotate: 28deg;
     object-fit: cover;
+}
+
+.small_icon{
+    margin-left: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+}
+
+.circle{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
