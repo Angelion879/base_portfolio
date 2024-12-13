@@ -21,7 +21,18 @@
     </div>
 </div>
 <div class="dark content_block">
-    
+    <div class="content_holder">
+        <div class="circle">
+            {% for i in repeat %}
+                {% include 'basis/small_icons.html' %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="content_holder">
+        <p class="text">
+            I'm a <span class="highlights">Software Developer</span>! <br/>
+            And am in love with <span class="highlights">Python</span>, <span class="highlights">Automation</span> and <span class="highlights">Game Design</span>.
+        </p>
+    </div>
 </div>
-
 {% endblock content %}
