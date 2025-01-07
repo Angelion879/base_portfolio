@@ -2,8 +2,14 @@
 {% load static %}
 
 {% block content %}
-<div class="from_container">
+<div class="intro from_container">
     <h3>New Post</h3>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn btn-primary" type="submit" value="Submit Post">
+        
     </form>
 </div>
 {% endblock content %}
