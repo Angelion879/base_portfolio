@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Post
 
+from .forms import PostForm
+
 # Create your views here.
 
 def home(request):
@@ -20,3 +22,11 @@ def post(request):
 
 def contact(request):
     return render(request, 'basis/contact.html')
+
+# CRUD views
+
+def createPost(request):
+    form = PostForm()
+
+    context = {'form':form}
+    return render(request, 'base/post_form.html', context)
