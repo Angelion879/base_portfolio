@@ -18,8 +18,11 @@ def feed(request):
     context = {'posts':posts}
     return render(request, 'basis/feed.html', context)
 
-def post(request):
-    return render(request, 'basis/post.html')
+def post(request, slug):
+    post = Post.objects.get(slug=slug)
+
+    context = {'post':post}
+    return render(request, 'basis/post.html', context)
 
 def contact(request):
     return render(request, 'basis/contact.html')
