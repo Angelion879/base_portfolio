@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import Post
+from django.contrib.auth.decorators import login_required
 
+from .models import Post
 from .forms import PostForm
 
 # Create your views here.
@@ -25,6 +26,7 @@ def contact(request):
 
 # CRUD views
 
+@login_required(login_url="home")
 def createPost(request):
     form = PostForm()
 
