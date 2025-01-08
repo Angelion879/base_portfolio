@@ -1,6 +1,30 @@
 {% extends 'basis/main.html' %}
+{% load static %}
 
 {% block content %}
-<h1 class="title">POST PAGE</h1>
+<style>
+    a>.nav_button.projects{
+        background-color: #ffce8a;
+        pointer-events: none;
+        .text{
+            color: #1e2233;
+        }
+    }
+</style>
+
+<div class="intro">
+    <h1 class="title">{{post.title}}</h1>
+    <h2 class="subtitle">{{post.sub_title}}</h2>
+</div>
+
+<div class="post">
+    <div class="img_container">
+        <img src="{{post.thumbnail.url}}">
+    </div>
+
+    <div class="post_content">
+        <p class="text">{{post.body}}</p>
+    </div>
+</div>
 
 {% endblock content %}

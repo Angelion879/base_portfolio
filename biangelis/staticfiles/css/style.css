@@ -22,7 +22,7 @@ a:hover{
 }
 
 .dark{
-    background-color: #4f5869;
+    background-color: #1e2233;
 }
 
 .highlights {
@@ -37,6 +37,7 @@ a:hover{
 .title{
     font-family: "Orbitron", sans-serif;
     font-size: 5rem;
+    font-weight: 400;
 }
 
 .text{
@@ -104,6 +105,12 @@ a:hover{
     justify-content: space-evenly;
 }
 
+.post_preview{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .preview_holder{
     top: 9rem;
     width: 100%;
@@ -122,7 +129,7 @@ a:hover{
 }
 
 .thumbnail{
-    width: 25rem;
+    width: 20rem;
     height: 15rem;
     object-fit: cover;
 }
@@ -131,5 +138,24 @@ a:hover{
     width: 40rem;
     height: 40rem;
     border-radius: 50%;
+    rotate: 28deg;
     object-fit: cover;
+}
+
+.small_icon{
+    margin-left: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+}
+
+.circle{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
