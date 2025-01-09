@@ -73,6 +73,8 @@ a:hover{
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
 }
 
 .navbar{
@@ -132,7 +134,7 @@ a:hover{
 }
 
 .preview{
-    width: 50%;
+    width: 50rem;
     height: 20rem;
     display: flex;
     align-items: center;
@@ -190,4 +192,13 @@ a:hover{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.vertical{
+    background-color: #ffce8a;
+    border-width: 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 0.1rem;
+    height: 1.2rem;
 }
