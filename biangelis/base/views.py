@@ -43,12 +43,12 @@ def createPost(request):
     return render(request, 'basis/post_form.html', context)
 
 @login_required(login_url="home")
-def updatePost(request,pk):
-    post = Post.objects.get(id=pk)
+def updatePost(request,slug):
+    post = Post.objects.get(slug=slug)
     form = PostForm(instance=post)
 
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES)
+        form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
         return redirect('feed')
