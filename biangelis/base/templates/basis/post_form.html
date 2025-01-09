@@ -15,10 +15,10 @@
 <div class="intro from_container">
     <h3 class="subtitle">New Post</h3>
 
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form class="text" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
-        <input class="btn btn-primary" type="submit" value="Submit Post">
+        <input class="" type="submit" value="Submit Post">
         
     </form>
 </div>

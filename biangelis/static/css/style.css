@@ -17,6 +17,11 @@ a:hover{
     }
 }
 
+form{
+    display: flexbox;
+    justify-content: center;
+}
+
 .light{
     background-color: #23263a;
 }
@@ -34,7 +39,7 @@ a:hover{
     font-size: 8rem;
 }
 
-.intro>.title,.intro>.subtitle{
+.intro>.title,.intro>.subtitle,.intro>form{
     margin-left: 2rem;
 }
 
