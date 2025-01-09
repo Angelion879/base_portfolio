@@ -1,0 +1,14 @@
+{% extends 'basis/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="intro">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <h3 class="text">Are you sure you want to delete {{item}}?</h3>
+        <input class="" type="submit" value="Confirm">
+    </form>
+</div>
+
+{% endblock content %}
