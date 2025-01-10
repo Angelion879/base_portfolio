@@ -7,19 +7,20 @@ body{
     margin: 0;
 }
 
-a, a:visited{
+a, a:visited, .navbar>a:hover{
     text-decoration: none;
 }
 
 a:hover{
-    .nav_button{
-        background-color: #232738;
-    }
+    text-decoration: underline;
+}
+
+a:hover .nav_button{
+    background-color: #232738;
 }
 
 form{
     display: flexbox;
-    justify-content: center;
 }
 
 .light{
@@ -39,8 +40,13 @@ form{
     font-size: 8rem;
 }
 
-.intro>.title,.intro>.subtitle,.intro>form{
-    margin-left: 2rem;
+.intro{
+    top: 8rem;
+    position: relative;
+}
+
+.intro>*{
+    margin-left: 4rem;
 }
 
 .title{
@@ -60,6 +66,7 @@ form{
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-size: 1.5rem;
+    text-align: justify;
 }
 
 .preview_title{
@@ -107,11 +114,6 @@ form{
     justify-content: center;
 }
 
-.intro{
-    top: 8rem;
-    position: relative;
-}
-
 .content_holder{
     width: 40%;
     display: flex;
@@ -129,6 +131,15 @@ form{
     justify-content: space-evenly;
 }
 
+.form_container{
+    top: 5rem;
+    position: relative;
+    height: 38rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .preview_holder{
     top: 9rem;
     width: 100%;
@@ -139,6 +150,7 @@ form{
 }
 
 .preview{
+    margin-bottom: 3rem;
     width: 50rem;
     height: 20rem;
     display: flex;
@@ -146,7 +158,12 @@ form{
     justify-content: space-evenly;
 }
 
+.post_preview{
+    width: 50%;
+}
+
 .thumbnail{
+    margin: 1.5rem;
     width: 23rem;
     height: 16rem;
     object-fit: cover;
@@ -165,6 +182,15 @@ form{
     position: relative;
     display: flex;
     justify-content: center;
+}
+
+.post_img{
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    height: 25rem;
+    width: 35rem;
+    object-fit: cover;
+    float: left;
 }
 
 .post_content{
