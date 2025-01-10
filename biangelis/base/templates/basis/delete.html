@@ -3,11 +3,18 @@
 
 {% block content %}
 
+<style>
+    .sub_button{
+        height: 2rem;
+        width: 7rem;
+    }
+</style>
+
 <div class="intro">
     <form method="POST" action="">
         {% csrf_token %}
         <h3 class="text">Are you sure you want to delete {{item}}?</h3>
-        <input class="" type="submit" value="Confirm">
+        <input class="sub_button" type="submit" value="Confirm">
     </form>
 </div>
 
