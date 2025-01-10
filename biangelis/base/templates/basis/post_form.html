@@ -10,16 +10,21 @@
             color: #1e2233;
         }
     }
+    .title{
+        margin-top: 0;
+    }
 </style>
 
-<div class="intro from_container">
-    <h3 class="subtitle">New Post</h3>
-
-    <form class="text" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input class="" type="submit" value="Submit Post">
-        
-    </form>
+<div class="intro">
+    <h3 class="title">New Post</h3>
+</div>
+<div>
+    <div class="form_container light">
+        <form class="text" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input class="" type="submit" value="Submit Post">        
+        </form>
+    </div>
 </div>
 {% endblock content %}
