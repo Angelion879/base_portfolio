@@ -134,7 +134,9 @@ form{
 .form_container{
     top: 5rem;
     position: relative;
-    height: 52rem;
+    height: 55rem;
+    width: 58rem;
+    border-radius: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,6 +155,7 @@ form{
     margin-bottom: 3rem;
     width: 51.5rem;
     height: 20rem;
+    border-radius: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -166,6 +169,7 @@ form{
     margin: 2rem;
     width: 23rem;
     height: 16rem;
+    border-radius: 1rem;
     object-fit: cover;
 }
 
@@ -186,9 +190,10 @@ form{
 
 .post_img{
     margin-right: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     height: 25rem;
     width: 35rem;
+    border-radius: 3rem;
     object-fit: cover;
     float: left;
 }
