@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.utils.translation import gettext as _, get_language
+from base.generator import home_repeat, post_repeat
 
 from .models import Post
 from .forms import PostForm
@@ -7,9 +9,11 @@ from .forms import PostForm
 # Create your views here.
 
 def home(request):
-    context = {
-        "repeat" : [1,2,3,4,5,6,7,8,9,10,12,13,14,15],
-    }
+    user_lang = get_language()
+    print(user_lang)
+    repeat = home_repeat()
+
+    context = {'repeat':repeat}
     return render(request, 'basis/home.html', context)
 
 def feed(request):
@@ -20,8 +24,9 @@ def feed(request):
 
 def post(request, slug):
     post = Post.objects.get(slug=slug)
+    repeat = post_repeat()
 
-    context = {'post':post}
+    context = {'post':post, 'repeat':repeat}
     return render(request, 'basis/post.html', context)
 
 def contact(request):

@@ -1,3 +1,11 @@
+{% load i18n %}
+
+<style>
+    .lang{
+        float: right;
+    }
+</style>
+
 <div class="navbar">
     <div class="navbar holder">
         <a href="{% url 'home' %}">
@@ -22,5 +30,17 @@
                 </div>
             </a>
         {% endif %}
+        <div class="nav_button lang">
+            {% block language_switcher %}
+                <form method="post" action="{% url 'set_language' %}">
+                    {% csrf_token %}
+                    {% get_current_language as current_language %}
+                    <select id="language-select" name="language" onchange="this.form.submit()">
+                        <option value="en" {% if current_language == "en" %}selected{% endif %}>English</option>
+                        <option value="pt" {% if current_language == "pt" %}selected{% endif %}>Portugueses</option>
+                      </select>
+                </form>
+            {% endblock %}
+        </div>
     </div>
 </div>

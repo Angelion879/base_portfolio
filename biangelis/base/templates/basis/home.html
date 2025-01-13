@@ -1,5 +1,6 @@
 {% extends 'basis/main.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <style>
@@ -14,7 +15,7 @@
 
 <div class="intro light content_block">
     <div class="content_holder">
-        <p class="intro_title">Hello! I'm <span class="highlights">Bianca Angelis</span>!</p>
+        <p class="intro_title">{% trans "Hello, I am" %} <span class="highlights">Bianca Angelis</span>!</p>
     </div>
     <div class="content_holder">
         <img class="profile_pic" src="{% static 'image/profpic.jpg' %}">
