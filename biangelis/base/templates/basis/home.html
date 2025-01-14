@@ -4,6 +4,13 @@
 
 {% block content %}
 <style>
+    .intro_title{
+        font-family: "Orbitron", sans-serif;
+        font-size: 8rem;
+    }
+    .pt_title{
+        font-size: 6.5rem;
+    }
     a>.nav_button.home{
         background-color: #ffce8a;
         pointer-events: none;
@@ -15,7 +22,9 @@
 
 <div class="intro light content_block">
     <div class="content_holder">
-        <p class="intro_title">{% trans "Hello, I am" %} <span class="highlights">Bianca Angelis</span>!</p>
+        {% get_current_language as current_language %}
+        <p class="intro_title {% if current_language == 'pt' %}pt_title{% endif %}">{% trans "Hello, I am" %} 
+            <span class="highlights">Bianca Angelis</span>!</p>
     </div>
     <div class="content_holder">
         <img class="profile_pic" src="{% static 'image/profpic.jpg' %}">
