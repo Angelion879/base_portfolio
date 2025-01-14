@@ -9,15 +9,18 @@ from .forms import PostForm
 # Create your views here.
 
 def home(request):
-    user_lang = get_language()
-    print(user_lang)
     repeat = home_repeat()
 
     context = {'repeat':repeat}
     return render(request, 'basis/home.html', context)
 
 def feed(request):
-    posts = Post.objects.filter(active=True)
+    user_lang = get_language()
+    print(user_lang)
+    if str(user_lang) == 'en':
+        posts = Post.objects.filter(language='en', active=True)
+    else:
+        posts = Post.objects.filter(language='pt', active=True)
 
     context = {'posts':posts}
     return render(request, 'basis/feed.html', context)
