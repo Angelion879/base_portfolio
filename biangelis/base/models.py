@@ -4,12 +4,22 @@ from django.utils.text import slugify
 
 # Create your models here.
 
+
+class Language(models.Model):
+    code = models.CharField(max_length=10, unique=True, primary_key=True)
+
+    def __str__(self):
+        return self.code
+
+
 class Post(models.Model):
     title = models.CharField(max_length=200)
     sub_title = models.CharField(max_length=200, null=True, blank=True)
-    thumbnail = models.ImageField(null=True, blank=True, upload_to="image", default="placeholder.png")
+    thumbnail = models.ImageField(
+        null=True, blank=True, upload_to="image", default="placeholder.png")
     body = models.TextField(null=True, blank=True)
     active = models.BooleanField(default=False)
+    language = models.OneToOneField(Language, on_delete=models.CASCADE, default='en')
     slug = models.SlugField(null=True, blank=True)
 
     def __str__(self):
