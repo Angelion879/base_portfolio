@@ -12,7 +12,7 @@ urlpatterns =[
     path('i18n/', include('django.conf.urls.i18n')),
 
     # CRUD paths
-    path('create_post/', views.createPost, name="create_post"),
-    path('update_post/<slug:slug>/', views.updatePost, name="update_post"),
-    path('delete_post/<slug:slug>/', views.deletePost, name="delete_post"),
+    path('create_post/', views.create_post, name="create_post"),
+    path('update_post/<slug:slug>/', views.update_post, name="update_post"),
+    path('delete_post/<slug:slug>/', views.delete_post, name="delete_post"),
 ]

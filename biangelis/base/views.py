@@ -26,10 +26,10 @@ def feed(request):
     return render(request, 'basis/feed.html', context)
 
 def post(request, slug):
-    post = Post.objects.get(slug=slug)
+    content = Post.objects.get(slug=slug)
     repeat = post_repeat()
 
-    context = {'post':post, 'repeat':repeat}
+    context = {'post':content, 'repeat':repeat}
     return render(request, 'basis/post.html', context)
 
 def contact(request):
@@ -38,7 +38,7 @@ def contact(request):
 # CRUD views
 
 @login_required(login_url="home")
-def createPost(request):
+def create_post(request):
     form = PostForm()
 
     if request.method == 'POST':
@@ -51,12 +51,12 @@ def createPost(request):
     return render(request, 'basis/post_form.html', context)
 
 @login_required(login_url="home")
-def updatePost(request,slug):
-    post = Post.objects.get(slug=slug)
-    form = PostForm(instance=post)
+def update_post(request,slug):
+    up_post = Post.objects.get(slug=slug)
+    form = PostForm(instance=up_post)
 
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES, instance=post)
+        form = PostForm(request.POST, request.FILES, instance=up_post)
         if form.is_valid():
             form.save()
         return redirect('feed')
@@ -65,11 +65,11 @@ def updatePost(request,slug):
     return render(request, 'basis/post_form.html', context)
 
 @login_required(login_url="home")
-def deletePost(request,slug):
-    post = Post.objects.get(slug=slug)
+def delete_post(request,slug):
+    del_post = Post.objects.get(slug=slug)
 
     if request.method == 'POST':
-        post.delete()
+        del_post.delete()
         return redirect('feed')
-    context={'item':post}
+    context={'item':del_post}
     return render(request, 'basis/delete.html', context)
