@@ -6,9 +6,9 @@ def home_repeat():
 
     return nums
 
-def post_repeat():
+def wlpp_repeat():
     nums = []
-    for i in range(1,20,+1):
+    for i in range(1,151,+1):
         nums.append(i)
 
     return nums
