@@ -1,6 +1,6 @@
 html {
     background-color: #1e2233;
-    color: white;
+    color: #f8fcff;
 }
 
 body{
@@ -71,6 +71,7 @@ form{
 
 .preview_title{
     font-family: "Orbitron", sans-serif;
+    font-weight: 800;
     font-size: 3rem;
     margin: 0;
 }
@@ -134,7 +135,7 @@ form{
 .form_container{
     top: 5rem;
     position: relative;
-    height: 55rem;
+    height: 63rem;
     width: 58rem;
     border-radius: 3rem;
     display: flex;
@@ -174,10 +175,26 @@ form{
 }
 
 .post{
+    top: 10rem;
     width: 100%;
     position: relative;
     align-items: center;
     justify-items: center;
+}
+
+.post_holder{
+    width: 75%;
+    border-radius: 3rem;
+    position: relative;
+    align-items: center;
+    justify-items: center;
+}
+
+.post_content{
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    width: 80%;
+    position: relative;
 }
 
 .img_container{
@@ -190,18 +207,12 @@ form{
 
 .post_img{
     margin-right: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     height: 25rem;
     width: 35rem;
     border-radius: 3rem;
     object-fit: cover;
     float: left;
-}
-
-.post_content{
-    top: 15rem;
-    width: 70%;
-    position: relative;
 }
 
 .profile_pic{
