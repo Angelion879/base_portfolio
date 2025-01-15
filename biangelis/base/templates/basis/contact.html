@@ -1,4 +1,5 @@
 {% extends 'basis/main.html' %}
+{% load i18n %}
 
 {% block content %}
 <style>
@@ -9,9 +10,48 @@
             color: #1e2233;
         }
     }
+    .form_container{
+        height: 50rem;
+    }
 </style>
-<div class="intro">
-    <h1 class="title">CONTACT PAGE</h1>
+
+<div class="post" style="top: 13rem;">
+    <div class="wallpaper">
+        {% for i in repeat %}
+            {% include 'basis/small_icons.html' %}
+        {% endfor %}
+    </div>
+    <div class="form_container light">
+        <form class="text" method="POST" action="{% url 'send_email' %}">
+            {% csrf_token %}
+            <div>
+                <label>{% trans "Name" %}</label>
+            </div>
+            <div>
+                <input class="form-control" type="text" name="name">
+            </div>
+            <div>
+                <label>{% trans "Subject" %}</label>
+            </div>
+            <div>
+                <input class="form-control" type="text" name="subject">
+            </div>
+            <div>
+                <label>Email</label>
+            </div>
+            <div>
+                <input class="form-control" type="text" name="email">
+            </div>
+            <div>
+                <label>{% trans "Message" %}</label>
+            </div>
+            <div>
+                <textarea class="form-control" name="message"></textarea>
+            </div>
+
+            <input class="text sub_button" type="submit" value="{% trans 'Send' %}">        
+        </form>
+    </div>
 </div>
 
 {% endblock content %}
