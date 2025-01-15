@@ -41,8 +41,38 @@
     <div class="content_holder">
         <p class="text">
             {% trans "I'm a " %}<span class="highlights">{% trans "Software Developer" %}</span>! <br/>
-            {% trans "And am in love with" %} <span class="highlights">Python</span>, <span class="highlights">{% trans "Automation" %}</span> {% trans "and" %} <span class="highlights">Game Design</span>.
+            {% trans "I'm mainly in love with" %} <span class="highlights">Python</span>, <span class="highlights">
+                {% trans "Automation" %}</span> {% trans "and" %} <span class="highlights">Game Design</span>,
+            {% trans "but I enjoy challenging myself with a variety of projects." %}
         </p>
+    </div>
+</div>
+<div class="light content_block">
+    <div class="content_holder">
+        <p class="text">
+            {% trans "I graduated in " %}<span class="highlights">{% trans "Computer Science" %}</span>{% trans " in" %} <br/>
+            <span class="subtitle highlights">dez 2022</span>
+        </p>
+    </div>
+    <hr class="vertical" style="height: 50%;">
+    <div class="content_holder">
+        <p class="text">
+            {% trans " But I've been working in the " %}<span class="highlights">{% trans "IT area" %}</span>{% trans " since" %} <br/>
+            <span class="subtitle highlights">{% trans "aug" %} 2019</span>
+        </p>
+    </div>
+</div>
+<div class="dark content_block">
+    <div class="content_holder">
+        <p class="text">
+            {% trans "Curious to see more?" %}<br/>
+            {% trans "Find me on " %}<span class="highlights">{% trans "Social Media" %}</span>!
+        </p>
+    </div>
+    <div class="content_holder">
+        <div class="light circle">
+            {% include 'basis/social_media.html' %}
+        </div>
     </div>
 </div>
 {% endblock content %}
