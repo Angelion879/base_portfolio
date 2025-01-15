@@ -14,6 +14,8 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+from google.oauth2 import service_account
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -45,7 +47,10 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',
 
     'crispy_forms',
-    'crispy_bootstrap4'
+    'crispy_bootstrap4',
+
+    'storages',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -141,6 +146,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/image/'
 
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
@@ -148,10 +154,33 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/image')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Set "static" folder
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "storages.backends.gcloud.GoogleCloudStorage",
+    },
+    "default": {
+        "BACKEND": "storages.backends.gcloud.GoogleCloudStorage",
+    },
+}
+
+GS_PROJECT_ID = 'striped-reserve-447916-g8'
+
+GS_BUCKET_NAME = 'diangelis-personal'
+
+# Add an unique ID to a file name if same file name exists
+GS_FILE_OVERWRITE = False
+
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+    os.path.join(BASE_DIR, 'gcp.json'),
+)
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# email sender settings
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
