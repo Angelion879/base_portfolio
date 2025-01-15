@@ -1,10 +1,18 @@
+import os
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import gettext as _, get_language
 from base.generator import home_repeat, wlpp_repeat
 
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.template.loader import render_to_string
+
 from .models import Post
 from .forms import PostForm
+
+from dotenv import load_dotenv
+load_dotenv()
 
 # Create your views here.
 
@@ -33,7 +41,10 @@ def post(request, slug):
     return render(request, 'basis/post.html', context)
 
 def contact(request):
-    return render(request, 'basis/contact.html')
+    repeat = wlpp_repeat()
+
+    context = {'repeat':repeat}
+    return render(request, 'basis/contact.html', context)
 
 # CRUD views
 
@@ -75,3 +86,28 @@ def delete_post(request,slug):
         return redirect('feed')
     context={'item':del_post}
     return render(request, 'basis/delete.html', context)
+
+# Email Send config
+
+def send_email(request):
+    repeat = wlpp_repeat()
+
+    if request.method == 'POST':
+        template = render_to_string('basis/email_template.html',{
+            'name':request.POST['name'],
+            'email':request.POST['email'],
+            'message':request.POST['message'],
+        })
+
+        email = EmailMessage(
+            request.POST['subject'],
+            template,
+            settings.EMAIL_HOST_USER,
+            [os.getenv('EMAIL_RECEIVER')]
+        )
+
+        email.fail_silently=False
+        email.send()
+
+    context = {'repeat':repeat}
+    return render(request, 'basis/email_sent.html', context)
