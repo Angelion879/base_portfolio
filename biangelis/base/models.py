@@ -9,7 +9,7 @@ class Language(models.Model):
     code = models.CharField(max_length=10, primary_key=True)
 
     def __str__(self):
-        return self.code
+        return str(self.code)
 
 
 class Post(models.Model):
@@ -23,7 +23,7 @@ class Post(models.Model):
     slug = models.SlugField(null=True, blank=True)
 
     def __str__(self):
-        return self.title
+        return str(self.title)
 
     def save(self, *args, **kwargs):
         if self.slug is None:
