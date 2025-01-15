@@ -52,7 +52,7 @@ form{
 
 .subtitle{
     font-family: "Orbitron", sans-serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 400;
 }
 
@@ -141,6 +141,48 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+input{
+    margin-bottom: 1.3rem;
+    background-color: #1e2233;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+[type="text"]{
+    height: 2rem;
+    width: 50rem;
+}
+
+textarea{
+    height: 15rem;
+    width: 50rem;
+    resize: none;
+}
+
+.form-control{
+    margin-bottom: 1.3rem;
+    color: #f8fcff;
+    font-size: 1rem;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    background-color: #1e2233;
+    border-radius: 0.5rem;
+    border: 0;
+}
+
+#id_active{
+    height: 1.3rem;
+    width: 1.3rem;
+    color: #ffce8a;
+}
+
+.sub_button{
+    margin-bottom: 0;
+    height: 2rem;
+    width: 10rem;
+    float: right;
 }
 
 .preview_holder{
@@ -240,7 +282,7 @@ form{
 .wallpaper{
     z-index: -1;
     top: -7rem;
-    height: 118%;
+    height: 120%;
     width: 100%;
     overflow: hidden;
     position: absolute;

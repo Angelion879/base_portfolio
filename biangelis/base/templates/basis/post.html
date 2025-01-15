@@ -1,5 +1,6 @@
 {% extends 'basis/main.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <style>
@@ -17,7 +18,7 @@
 
 
 <div class="intro dark" style="padding-bottom: 0.5rem;">
-    <a href="{% url 'feed' %}" class="preview_links highlights">Back to Projects</a>
+    <a href="{% url 'feed' %}" class="preview_links highlights">{% trans "Back to Projects" %}</a>
     <h1 class="title">{{post.title}}</h1>
     <h2 class="subtitle">{{post.sub_title}}</h2>
 </div>
@@ -32,7 +33,7 @@
         <div class="post_content">
             <img class="post_img" src="{{post.thumbnail.url}}">
             <p class="text">{{post.body|safe|linebreaksbr}}</p>
-            <a href="{% url 'feed' %}" class="preview_links highlights last_link">Back to Projects</a>
+            <a href="{% url 'feed' %}" class="preview_links highlights last_link">{% trans "Back to Projects" %}</a>
         </div>
     </div>
 </div>
