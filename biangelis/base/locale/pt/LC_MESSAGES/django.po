@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-14 23:43-0300\n"
+"POT-Creation-Date: 2025-01-16 10:08-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,10 +63,8 @@ msgid "Software Developer"
 msgstr "Desenvolvedor de Software"
 
 #: .\base\templates\basis\home.html:44
-#, fuzzy
-#| msgid "And am in love with"
 msgid "I'm mainly in love with"
-msgstr "E sou especialmente apaixonada por"
+msgstr "Sou especialmente apaixonada por"
 
 #: .\base\templates\basis\home.html:45
 msgid "Automation"
@@ -93,8 +91,8 @@ msgid " in"
 msgstr " em"
 
 #: .\base\templates\basis\home.html:60
-msgid " But I've been working in the "
-msgstr " Mas trabalho na "
+msgid "But I've been working in the "
+msgstr "Mas trabalho na "
 
 #: .\base\templates\basis\home.html:60
 msgid "IT area"
@@ -114,7 +112,7 @@ msgstr "Curioso para ver mais?"
 
 #: .\base\templates\basis\home.html:69
 msgid "Find me on "
-msgstr "Me encontre nas"
+msgstr "Me encontre nas "
 
 #: .\base\templates\basis\home.html:69
 msgid "Social Media"
