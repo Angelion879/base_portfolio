@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','https://biangelis-82865043539.southamerica-east1.run.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','https://striped-reserve-447916-g8.rj.r.appspot.com']
 
 
 # Application definition
