@@ -1,1 +1,1 @@
-web: gunicorn biangelis.wsgi --log-file -
+web: gunicorn biangelis.wsgi
