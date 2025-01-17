@@ -1,2 +1,3 @@
 runtime: python312
 service: default
+entrypoint: gunicorn -b :$PORT biangelis.wsgi --timeout 120
