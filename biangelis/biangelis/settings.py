@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','www.biangelis.com','biangelis.com','www.biangelis-436d56580d4a.herokuapp.com','biangelis-436d56580d4a.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','https://biangelis-82865043539.southamerica-east1.run.app']
 
 
 # Application definition
@@ -167,9 +167,9 @@ STORAGES = {
     },
 }
 
-GS_PROJECT_ID = 'striped-reserve-447916-g8'
+GS_PROJECT_ID = os.getenv('BKT_PROJECT_ID')
 
-GS_BUCKET_NAME = 'diangelis-personal'
+GS_BUCKET_NAME = os.getenv('BKT_NAME')
 
 # Add an unique ID to a file name if same file name exists
 GS_FILE_OVERWRITE = False
