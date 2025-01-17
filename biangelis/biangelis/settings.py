@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-from google.oauth2 import service_account
+# from google.oauth2 import service_account
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
