@@ -94,8 +94,8 @@ WSGI_APPLICATION = 'biangelis.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'ENGINE': 'django.db.backends.mysql',
         'HOST': os.getenv('BD_ADDRESS'),
         'USER': os.getenv('BD_USERNAME'),
         'PASSWORD': os.getenv('BD_PASSWORD'),
@@ -175,11 +175,9 @@ GS_BUCKET_NAME = 'diangelis-personal'
 # Add an unique ID to a file name if same file name exists
 GS_FILE_OVERWRITE = False
 
-'''
 GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
     os.path.join(BASE_DIR, 'gcp.json'),
 )
-'''
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
