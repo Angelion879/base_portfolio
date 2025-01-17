@@ -1,0 +1,1 @@
+echo ${GOOGLE_CREDENTIALS@Q} > /biangelis/gcp.json
