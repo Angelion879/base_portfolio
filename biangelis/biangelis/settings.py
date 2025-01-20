@@ -155,6 +155,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/image')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Set "static" folder
+'''
 STORAGES = {
     "staticfiles": {
         "BACKEND": "storages.backends.gcloud.GoogleCloudStorage",
@@ -164,16 +165,16 @@ STORAGES = {
     },
 }
 
-GS_PROJECT_ID = 'striped-reserve-447916-g8'
+GS_PROJECT_ID = 'GCP_project_ID'
 
-GS_BUCKET_NAME = 'diangelis-personal'
-
+GS_BUCKET_NAME = 'Your_bucket_name'
 # Add an unique ID to a file name if same file name exists
 GS_FILE_OVERWRITE = False
 
 GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
     os.path.join(BASE_DIR, 'gcp_file.json'),
 )
+'''
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
