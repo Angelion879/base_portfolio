@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','striped-reserve-447916-g8.rj.r.appspot.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -95,7 +95,6 @@ WSGI_APPLICATION = 'biangelis.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        #'ENGINE': 'django.db.backends.mysql',
         'HOST': os.getenv('BD_ADDRESS'),
         'USER': os.getenv('BD_USERNAME'),
         'PASSWORD': os.getenv('BD_PASSWORD'),
@@ -176,7 +175,7 @@ GS_BUCKET_NAME = 'diangelis-personal'
 GS_FILE_OVERWRITE = False
 
 GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
-    os.path.join(BASE_DIR, 'gcp.json'),
+    os.path.join(BASE_DIR, 'gcp_file.json'),
 )
 
 # Default primary key field type
